@@ -1,4 +1,5 @@
 const path = require('path')
+const CopyrightPlugin = require('./plugins/CopyrightPlugin.js')
 
 module.exports = {
     mode: 'development',
@@ -21,5 +22,10 @@ module.exports = {
                 }
             }]
         }]
-    }
+    },
+    plugins: [
+        new CopyrightPlugin({
+            filename: 'README.md'
+        }),
+    ]
 }
